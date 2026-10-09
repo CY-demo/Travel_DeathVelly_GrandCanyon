@@ -14,26 +14,52 @@ function goDay(id,restore){
  $('#dayHero').classList.toggle('day-hero--text',!activeDay.image);
  $('#dayHero').innerHTML=`${activeDay.image?`<img src="${esc(activeDay.image)}" alt="${esc(activeDay.title)}真實景觀照片">`:''}<div class="hero-text"><p class="eyebrow" style="color:#efb974">${esc(activeDay.label)} · ${activeDay.chapters.length} 個閱讀章節</p><h2>${esc(activeDay.subtitle)}</h2><p>${esc(activeDay.summary)}</p><p class="timing">${esc(activeDay.timing)}</p></div>`;
  const airport=activeDay.kind==='airport';
- $('#expandAll').hidden=airport;
+ $('#expandAll').hidden=false;
  $('#chapterHeading').textContent=activeDay.title+(airport?' · 位置':' · 分站介紹');
  $('#sectionLabel').textContent=airport?'貴賓室位置':'逐站探索地景';
- $('#readingNote').textContent=airport?'各貴賓室所在的登機區與鄰近登機門。':'每站都有詳細介紹、觀察重點與簡單走法。參考停留時間不等於當天保證。';
+ $('#readingNote').textContent=airport?'點選機場分類，展開查看貴賓室位置與可用信用卡。':'每站都有詳細介紹、觀察重點與簡單走法。參考停留時間不等於當天保證。';
  $('#chapterNav').innerHTML=activeDay.chapters.map((c,i)=>`<a class="chapter-link" href="#${activeDay.id}/${c.id}" data-id="${c.id}"><span>${String(i+1).padStart(2,'0')}</span>${esc(c.title)}</a>`).join('');
  $('#chapters').innerHTML=activeDay.chapters.map((c,i)=>airport?`<article class="chapter" id="${c.id}"><h3>${esc(c.title)}</h3><p class="english">${esc(c.en)}</p><p class="lead" style="white-space:pre-line">${esc(c.lead)}</p></article>`:`<article class="chapter" id="${c.id}"><div class="chapter-top"><div><p class="eyebrow">${String(i+1).padStart(2,'0')} · ${esc(activeDay.title)}</p><h3>${esc(c.title)}</h3><p class="english">${esc(c.en)}</p></div></div><span class="badge ${/協調|替換|爭取|提醒/.test(c.status)?'conditional':''}">${esc(c.status)}</span><span class="time">${esc(c.time)}</span><p class="lead">${esc(c.lead)}</p>${renderTable(c.table)}<details ${i===0?'open':''}><summary>${esc(activeDay.detailLabel||'詳細介紹與形成故事')}</summary><div class="script">${c.paras.map(p=>`<p>${esc(p)}</p>`).join('')}</div></details><div class="observe"><strong>${esc(activeDay.lookLabel||'現場看什麼')}</strong><br>${esc(c.look)}</div><p class="walk"><strong>${esc(activeDay.walkLabel||'簡單走走與行程提醒')}</strong><br>${esc(c.walk)}</p><div class="refs">${c.sources.map(k=>`<a href="${esc(data.sources[k][1])}" target="_blank" rel="noopener">${esc(data.sources[k][0])}</a>`).join('')}</div></article>`).join('');
+
+ if(airport){
+  const groups=[{id:'airport-sjc',label:'SJC 聖荷西機場',match:c=>c.id==='sjc-club'},{id:'airport-las',label:'LAS 拉斯維加斯機場',match:c=>c.id!=='sjc-club'}];
+  const container=$('#chapters');
+  const cards=new Map([...container.children].map(el=>[el.id,el]));
+  container.replaceChildren();
+  groups.forEach(g=>{
+   const members=activeDay.chapters.filter(g.match);
+   const group=document.createElement('details');
+   group.id=g.id;group.className='chapter airport-group';
+   const summary=document.createElement('summary');
+   summary.style.cssText='cursor:pointer;font-size:1.3rem;font-weight:700;padding:8px 0';
+   summary.textContent=g.label+' · '+members.length+' 個貴賓室項目';
+   group.append(summary);
+   members.forEach(c=>{
+    const card=cards.get(c.id);
+    card.style.marginTop='16px';
+    card.querySelector('h3').textContent=c.title.replace(/^(SJC 聖荷西機場|LAS 拉斯維加斯機場)｜/,'');
+    group.append(card);
+   });
+   container.append(group);
+  });
+  $('#chapterNav').innerHTML=groups.map(g=>`<a class="chapter-link" href="#airport/${g.id}" data-id="${g.id}">${esc(g.label)}</a>`).join('');
+  $('#expandAll').textContent='展開所有機場';
+ }
+
  save('day',activeDay.id);
  if(!restore) window.scrollTo({top:0,behavior:'instant'});
 }
 function route(){
  const [day,chapter]=location.hash.slice(1).split('/');
  if(!activeDay||day!==activeDay.id) goDay(day||read('day')||'death',!!chapter);
- if(chapter){const el=document.getElementById(chapter);if(el){const details=el.querySelector('details');if(details)details.open=true;requestAnimationFrame(()=>el.scrollIntoView({block:'start'}));save('chapter',day+'/'+chapter);document.querySelectorAll('.chapter-link').forEach(a=>a.classList.toggle('active',a.dataset.id===chapter));}}
+ if(chapter){const el=document.getElementById(chapter);if(el){const group=el.closest('details.airport-group');if(group)group.open=true;const details=el.querySelector('details');if(details)details.open=true;requestAnimationFrame(()=>el.scrollIntoView({block:'start'}));save('chapter',day+'/'+chapter);document.querySelectorAll('.chapter-link').forEach(a=>a.classList.toggle('active',a.dataset.id===chapter));}}
 }
 $('#font').addEventListener('click',()=>{const on=document.body.classList.toggle('large');$('#font').setAttribute('aria-pressed',on);$('#font').textContent=on?'標準字':'大字';save('large',String(on));});
 if(read('large')==='true'){$('#font').click()}
 $('#helpOpen').onclick=()=>{$('#help').showModal();checkCache();};
 $('#helpClose').onclick=()=>$('#help').close();
 $('#help').addEventListener('click',e=>{if(e.target===$('#help')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
-$('#expandAll').onclick=()=>{allExpanded=!allExpanded;$('#chapters').querySelectorAll('details').forEach(d=>d.open=allExpanded);$('#expandAll').textContent=allExpanded?'收合詳細介紹':'展開全部介紹';};
+$('#expandAll').onclick=()=>{allExpanded=!allExpanded;$('#chapters').querySelectorAll('details').forEach(d=>d.open=allExpanded);$('#expandAll').textContent=activeDay.kind==='airport'?(allExpanded?'收合所有機場':'展開所有機場'):(allExpanded?'收合詳細介紹':'展開全部介紹');};
 function network(){$('#network').textContent=navigator.onLine?'已連線':'離線閱讀';}
 window.addEventListener('online',network);window.addEventListener('offline',network);network();
 let registration;
