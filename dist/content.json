@@ -526,137 +526,36 @@
       "kind": "airport",
       "label": "航班日",
       "title": "LAS 貴賓室",
-      "subtitle": "回程前，坐下來好好休息。",
-      "summary": "Centurion、Sidecar 與 Priority Pass 備案：先確認卡別，再決定三個人去哪裡。以下費用以美國發行的個人／商務 Platinum 卡為例；其他國家、Corporate 或 Centurion 卡請核對自己的權益。",
-      "timing": "核對日期：2026 年 10 月 4 日｜皆為 LAS 當地時間｜入場依當日空位",
-      "detailLabel": "詳細使用說明",
-      "lookLabel": "選擇重點",
-      "walkLabel": "出發前提醒",
+      "subtitle": "拉斯維加斯機場貴賓室位置",
+      "summary": "LAS 哈利・瑞德國際機場｜安檢後",
+      "timing": "",
       "chapters": [
         {
           "id": "centurion",
-          "title": "Centurion：用餐與休息首選",
-          "en": "The Centurion Lounge · Concourse D",
-          "status": "需符合卡片與航班資格",
-          "time": "每日 05:00–23:00",
-          "lead": "位於 D1 登機門對面，適合在回程前吃點東西、坐下休息。",
-          "paras": [
-            "貴賓室在安檢後的 D 登機區。從 Terminal 1 或 Terminal 3 都可經機場電車前往，通過安檢後依 D Gates 指標走。D 登機區不等於航空公司報到櫃檯所在的航廈。",
-            "館內有餐飲、飲品、Wi-Fi、工作區與淋浴設施。餐點依時段供應；若想洗澡，入場時先詢問可用時段。",
-            "以 Platinum 卡入場，通常限當日班機起飛前 3 小時內，須出示有效卡片及同名、已確認的登機證，並備妥身分證件。若 LAS 是此段航程終點，單純抵達不能使用 Centurion；本行程較適合安排在回程。"
-          ],
-          "look": "若攜伴費可接受、又有充裕時間，我會先考慮這間。是否需要候位仍看當日情況。",
-          "walk": "離開貴賓室後還要前往自己的登機門；不要把全部候機時間都算成館內休息時間。",
+          "title": "The Centurion Lounge",
+          "en": "D 登機區",
+          "lead": "D1 登機門對面。",
           "sources": [
-            "las-centurion",
-            "las-access"
-          ]
-        },
-        {
-          "id": "lounge-cost",
-          "title": "三位成人：先算攜伴費",
-          "en": "Card eligibility & guest fees",
-          "status": "以下為條件式試算",
-          "time": "金額為美元／每次入場",
-          "lead": "同樣一張白金卡，Centurion 和 Priority Pass 的攜伴規則不同。",
-          "paras": [
-            "以下假設三人同行、一位持卡人帶兩位成人。美國個人與商務 Platinum 在 Centurion 的一般成人攜伴費為每人 US$50。若帳戶已達合資格年度消費 US$75,000，並已啟用免費攜伴資格，可帶兩人免費入場。",
-            "Centurion 的同行者需與持卡人搭同一班機。免費攜伴資格是否生效，請以 Amex 帳戶 Benefits 顯示為準；一般 Gold 卡或免年費 Companion Platinum，不能直接套用這裡的白金卡權益。",
-            "若使用美國 Platinum 附帶、已完成登記的 Priority Pass，參與計畫且接待同行者的貴賓室可含兩位免費同行者。LAS 的 The Club 是可考慮的選項；免費資格不代表保證有空位。"
-          ],
-          "table": {
-            "caption": "三人同行的入場費比較（不含卡片年費）",
-            "headers": [
-              "使用方式",
-              "三人合計入場費"
-            ],
-            "rows": [
-              [
-                "Centurion：1 位美國 Platinum 持卡人，未啟用免費攜伴",
-                "US$100（兩位同行者各 US$50）"
-              ],
-              [
-                "Centurion：1 位已啟用兩名免費攜伴資格的持卡人",
-                "US$0"
-              ],
-              [
-                "Centurion：3 人各自持有符合資格的卡片",
-                "US$0；各自核驗"
-              ],
-              [
-                "The Club：1 位已啟用美國 Platinum Priority Pass 的會員＋2 位同行者",
-                "US$0；須符合館方入場條件"
-              ]
-            ]
-          },
-          "look": "若沒有 Centurion 免費攜伴權益，The Club 的 Priority Pass 方案通常較省。這是費用比較，不是空位或服務品質保證。",
-          "walk": "實際 Amex 卡別與發卡國家尚未確認，請勿直接把「三人免費」當作已確認權益。Delta Reserve 另有 Delta 航班要求，不能套用到 Southwest。",
-          "sources": [
-            "las-access",
-            "amex-lounge-terms",
-            "club-d"
+            "las-centurion"
           ]
         },
         {
           "id": "sidecar",
-          "title": "Sidecar：小盤料理與迷你龍蝦堡",
-          "en": "Sidecar by The Centurion Lounge",
-          "status": "與 Centurion 分開的場所",
-          "time": "每日 08:00–22:00",
-          "lead": "曾供應 Mini Lobster Roll 迷你龍蝦堡；餐點輪替，當日供應請看現場菜單。",
-          "paras": [
-            "Sidecar 距離 D1 對面的 Centurion Lounge 不遠。空間較精巧，透過 QR Code 點選小盤餐點，由服務人員送到桌邊。",
-            "你聽說的龍蝦料理，確實有旅客紀錄提到：Travel Squad 在 2026 年 9 月 4 日刊出的體驗文，列出午晚餐曾有 Mini Lobster Rolls（迷你龍蝦堡）。文章記錄的是較早的到訪，不能直接視為十月固定菜單。Amex 官方也說餐點定期輪替，這次是否吃得到仍要以當日供應為準。",
-            "Platinum 在這裡的入場窗口是班機起飛前 90 分鐘內，不能沿用 Centurion 的 3 小時規則。這較適合短暫用餐，時間緊或需要跨登機區的人要先算好來回。",
-            "免費攜伴資格與收費仍需核對；若同一天先去 Centurion、再去 Sidecar，需付費的同行者會在兩個場所各收一次入場費。"
-          ],
-          "look": "想嘗試小盤料理，可以把 Sidecar 列入回程候選；入座掃 QR Code 後先找 Mini Lobster Roll，再詢問供應情況。若登機門不在 D 區，先確認回程動線與剩餘時間。",
-          "walk": "90 分鐘是起飛前的入場窗口，不是承諾能在裡面坐滿 90 分鐘；仍須準時到登機門。",
+          "title": "Sidecar by The Centurion Lounge",
+          "en": "D 登機區",
+          "lead": "D1 登機門附近，鄰近 The Centurion Lounge。",
           "sources": [
-            "las-sidecar",
-            "amex-lounge-terms",
-            "sidecar-review"
+            "las-sidecar"
           ]
         },
         {
           "id": "priority-pass",
-          "title": "The Club：Priority Pass 備案",
-          "en": "The Club LAS · D33 / E2",
-          "status": "Priority Pass 需事先啟用",
-          "time": "兩個位置可選",
-          "lead": "如果三人進 Centurion 要付 US$100，可以先評估 The Club。",
-          "paras": [
-            "The Club LAS 有兩間：D 登機區二樓、D33 附近的館，營業時間為 05:00–23:30；Terminal 3、E2 對面的館，為 05:00–午夜。兩館均接受符合資格的 Priority Pass，並提供餐飲與 Wi-Fi；淋浴另收 US$20。",
-            "出發前先完成 Amex 的 Priority Pass 登記並啟用電子會員卡，入場時備好會員卡與登機證。不要等走到門口才開始辦理。部分館可能也接受已登記會員的實體 Platinum 卡，仍以現場核驗為準。",
-            "一般可在起飛前 3 小時內入場。D 館 11:00–16:00、E 館 16:00–22:00 特別可能因人數限制入場；三個人也不保證能坐在一起。從 D 區前往 E 館需要額外移動，備案應先看自己登機門位置。"
-          ],
-          "look": "D33 館可作為 D 區備案；E2 館較適合本來就在 Terminal 3／E 區候機的旅客。",
-          "walk": "有 Priority Pass 權益時，先按會員方式入場；官網付費日票是另一種產品，不必為了查資格先買票。",
+          "title": "The Club LAS",
+          "en": "D 登機區／Terminal 3",
+          "lead": "D 館：D33 登機門附近、二樓。\nE 館：Terminal 3，E2 登機門對面。",
           "sources": [
             "club-d",
-            "club-e",
-            "amex-lounge-terms"
-          ]
-        },
-        {
-          "id": "airport-plan",
-          "title": "Southwest 與回程動線",
-          "en": "Plan the airport visit",
-          "status": "依實際登機門調整",
-          "time": "先看登機時間，再排休息",
-          "lead": "貴賓室在 D 區；若搭 Southwest，請把跨區步行與電車時間留進去。",
-          "paras": [
-            "若回程也是 Southwest，先依航空公司指示在 Terminal 1 辦理報到、托運及安檢，再依 D Gates 指標前往 Centurion。休息後依當日登機門資訊返回相應區域；不要跟著領行李或出口指標離開安檢區。",
-            "LAS 機場電車連接 Terminal 1、Terminal 3、C 與 D 登機區。電車本身的車程不能代表完整轉乘時間，還要算步行、等車與找路；同行有長輩時，寧可縮短館內停留。",
-            "我的安排建議是：先確認當日登機門與登機開始時間，再決定是否去貴賓室。若需跨區，可先抓登機開始前 30–45 分鐘離開貴賓室作為保守規劃，再依現場距離調整；這不是機場公布的固定交通時間。"
-          ],
-          "look": "卡片資格、兩位同行者費用、Priority Pass 是否啟用、當日登機門：出發前確認這四件事最有用。",
-          "walk": "備好實體 Amex 卡、三人的登機證、身分證件與 Priority Pass 電子卡。公開導覽未寫入私人航班時間；個人回程請以機票確認資料為準。",
-          "sources": [
-            "las-tram",
-            "las-airlines",
-            "las-centurion",
-            "las-access"
+            "club-e"
           ]
         }
       ]
@@ -731,17 +630,9 @@
       "Amex｜LAS Centurion 位置與時間",
       "https://www.thecenturionlounge.com/locations/las/"
     ],
-    "las-access": [
-      "Amex｜Centurion 入場與攜伴規則",
-      "https://www.thecenturionlounge.com/info/access/"
-    ],
     "las-sidecar": [
       "Amex｜LAS Sidecar",
       "https://www.thecenturionlounge.com/locations/las-sidecar/"
-    ],
-    "amex-lounge-terms": [
-      "Amex 美國｜白金卡與 Priority Pass 條款",
-      "https://www.americanexpress.com/en-us/travel/lounges/the-platinum-card/terms"
     ],
     "club-d": [
       "The Club LAS｜D33 附近",
@@ -750,20 +641,8 @@
     "club-e": [
       "The Club LAS｜E2 對面",
       "https://theclubairportlounges.com/lounges/las-the-club-terminal-3"
-    ],
-    "las-tram": [
-      "LAS 機場｜航廈電車",
-      "https://www.harryreidairport.com/busses-shuttles/airport-trams"
-    ],
-    "las-airlines": [
-      "LAS 機場｜航空公司與航廈",
-      "https://www.harryreidairport.com/flights/airlines"
-    ],
-    "sidecar-review": [
-      "Travel Squad｜2026/9/4 Sidecar 體驗與餐點紀錄",
-      "https://travelsquadpodcast.com/sidecar-centurion-lounge-review/"
     ]
   },
-  "updated": "2026-10-04",
-  "revision": "2026-10-04-las-lounges"
+  "updated": "2026-10-09",
+  "revision": "2026-10-09-lounge-locations"
 }

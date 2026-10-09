@@ -10,7 +10,7 @@ This website was built with substantial AI assistance using ChatGPT and Codex. A
 
 ## What it does
 
-- Organizes 31 reading chapters into three sightseeing days and an airport guide.
+- Organizes 29 reading chapters into three sightseeing days and an airport lounge location list.
 - Explains landscape formation alongside practical sightseeing notes and source links.
 - Supports larger text, expandable chapters, and direct chapter navigation.
 - Saves text, photographs, and application files for offline reading on each device.
