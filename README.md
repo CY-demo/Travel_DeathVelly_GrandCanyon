@@ -2,7 +2,7 @@
 
 A mobile-friendly Traditional Chinese travel guide to Death Valley, the Grand Canyon South Rim, Upper Antelope Canyon, Horseshoe Bend, and Las Vegas airport lounges.
 
-**[Open the current live demo](https://canyon-field-guide.workspace-721786.chatgpt.site)**
+**[Open the website](https://cy-demo.github.io/Travel_DeathVelly_GrandCanyon/)**
 
 ## Built with AI
 
@@ -32,7 +32,7 @@ Then open `http://localhost:8000`. Service workers require HTTPS or localhost. R
 
 ## GitHub Pages
 
-Repository: [CY-demo/Travel_DeathVelly_GrandCanyon](https://github.com/CY-demo/Travel_DeathVelly_GrandCanyon). After Pages is enabled and deployment succeeds, the website address will be `https://cy-demo.github.io/Travel_DeathVelly_GrandCanyon/`.
+Repository: [CY-demo/Travel_DeathVelly_GrandCanyon](https://github.com/CY-demo/Travel_DeathVelly_GrandCanyon). Live website: [Canyon Field Guide](https://cy-demo.github.io/Travel_DeathVelly_GrandCanyon/).
 
 In the repository settings, select **Pages → Source → GitHub Actions**. The included workflow publishes `dist/` whenever changes are pushed to `main`, or when run manually. Its successful deployment displays the public Pages URL. The manifest and asset paths support a project subdirectory.
 
