@@ -532,7 +532,7 @@
       "chapters": [
         {
           "id": "sjc-club",
-          "title": "The Club SJC",
+          "title": "SJC 聖荷西機場｜The Club SJC",
           "en": "SJC · Terminal A",
           "lead": "A15 館：Terminal A，A15 登機門對面、三樓。\nA8 館：Terminal A，A8 登機門附近（Amex 目前標示暫時關閉；2026/10/8 查核）。\n\n可用信用卡：美國 Amex Platinum／Business Platinum（須先啟用附帶的 Priority Pass，憑會員卡入場）；其他附合資格 Priority Pass 或 LoungeKey 權益的信用卡亦可。",
           "sources": [
@@ -543,7 +543,7 @@
         },
         {
           "id": "centurion",
-          "title": "The Centurion Lounge",
+          "title": "LAS 拉斯維加斯機場｜The Centurion Lounge",
           "en": "D 登機區",
           "lead": "D1 登機門對面。\n\n可用信用卡：Amex Platinum（個人／商務／Corporate）、Centurion 黑卡；Delta SkyMiles Reserve（須符合 Delta 當日航班條件）。",
           "sources": [
@@ -553,7 +553,7 @@
         },
         {
           "id": "sidecar",
-          "title": "Sidecar by The Centurion Lounge",
+          "title": "LAS 拉斯維加斯機場｜Sidecar by The Centurion Lounge",
           "en": "D 登機區",
           "lead": "D1 登機門附近，鄰近 The Centurion Lounge。\n\n可用信用卡：Amex Platinum（個人／商務／Corporate）、Centurion 黑卡；Delta SkyMiles Reserve（須符合 Delta 當日航班條件）。",
           "sources": [
@@ -563,7 +563,7 @@
         },
         {
           "id": "priority-pass",
-          "title": "The Club LAS",
+          "title": "LAS 拉斯維加斯機場｜The Club LAS",
           "en": "D 登機區／Terminal 3",
           "lead": "D 館：D33 登機門附近、二樓。\nE 館：Terminal 3，E2 登機門對面。\n\n可用信用卡：美國 Amex Platinum／Business Platinum（須先啟用附帶的 Priority Pass，憑會員卡入場）；其他附合資格 Priority Pass 或 LoungeKey 權益的信用卡亦可。",
           "sources": [
