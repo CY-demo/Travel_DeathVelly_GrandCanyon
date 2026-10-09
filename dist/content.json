@@ -525,11 +525,22 @@
       "id": "airport",
       "kind": "airport",
       "label": "航班日",
-      "title": "LAS 貴賓室",
-      "subtitle": "拉斯維加斯機場貴賓室位置",
-      "summary": "LAS 哈利・瑞德國際機場｜安檢後",
+      "title": "SJC／LAS 貴賓室",
+      "subtitle": "機場貴賓室位置",
+      "summary": "SJC 聖荷西・LAS 拉斯維加斯｜安檢後",
       "timing": "",
       "chapters": [
+        {
+          "id": "sjc-club",
+          "title": "The Club SJC",
+          "en": "SJC · Terminal A",
+          "lead": "A15 館：Terminal A，A15 登機門對面、三樓。\nA8 館：Terminal A，A8 登機門附近（Amex 目前標示暫時關閉；2026/10/8 查核）。\n\n可用信用卡：美國 Amex Platinum／Business Platinum（須先啟用附帶的 Priority Pass，憑會員卡入場）；其他附合資格 Priority Pass 或 LoungeKey 權益的信用卡亦可。",
+          "sources": [
+            "sjc-club",
+            "sjc-a8",
+            "amex-lounge-terms"
+          ]
+        },
         {
           "id": "centurion",
           "title": "The Centurion Lounge",
@@ -652,6 +663,14 @@
     "amex-lounge-terms": [
       "Amex｜Platinum 與 Priority Pass 權益",
       "https://www.americanexpress.com/en-us/travel/lounges/the-platinum-card/terms"
+    ],
+    "sjc-club": [
+      "The Club SJC｜A15 位置",
+      "https://theclubairportlounges.com/lounges/sjc-the-club-terminal-a15"
+    ],
+    "sjc-a8": [
+      "Amex｜SJC A8（暫時關閉）",
+      "https://www.americanexpress.com/en-us/travel/lounges/the-platinum-card/SJC/the-club-sjc-gate-a8-terminal-a-aMBBT70trF/"
     ]
   },
   "updated": "2026-10-09",

@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 const root=new URL('./dist/',import.meta.url);
 const data=JSON.parse(fs.readFileSync(new URL('content.json',root)));
 assert.equal(data.days.length,4);
-assert.equal(data.days.flatMap(d=>d.chapters).length,29);
+assert.equal(data.days.flatMap(d=>d.chapters).length,30);
 for(const d of data.days){
  if(d.image) assert(fs.existsSync(new URL(d.image,root)));
  for(const c of d.chapters) for(const source of c.sources) assert(data.sources[source]);
@@ -36,4 +36,4 @@ for(const base of ['https://cy-demo.github.io/Travel_DeathVelly_GrandCanyon/','h
   assert.equal((await response).status,200);
  }
 }
-console.log('PASS: 29 chapters, sources, DOM IDs, relative manifest, offline download and reading at root and GitHub Pages subpath.');
+console.log('PASS: 30 chapters, sources, DOM IDs, relative manifest, offline download and reading at root and GitHub Pages subpath.');

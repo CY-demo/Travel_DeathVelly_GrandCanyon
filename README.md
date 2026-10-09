@@ -1,6 +1,6 @@
 # Canyon Field Guide · 峽谷隨行
 
-A mobile-friendly Traditional Chinese travel guide to Death Valley, the Grand Canyon South Rim, Upper Antelope Canyon, Horseshoe Bend, and Las Vegas airport lounges.
+A mobile-friendly Traditional Chinese travel guide to Death Valley, the Grand Canyon South Rim, Upper Antelope Canyon, Horseshoe Bend, and San José and Las Vegas airport lounges.
 
 **[Open the website](https://cy-demo.github.io/Travel_DeathVelly_GrandCanyon/)**
 
@@ -10,7 +10,7 @@ This website was built with substantial AI assistance using ChatGPT and Codex. A
 
 ## What it does
 
-- Organizes 29 reading chapters into three sightseeing days and an airport lounge location list.
+- Organizes 30 reading chapters into three sightseeing days and an airport lounge location list.
 - Explains landscape formation alongside practical sightseeing notes and source links.
 - Supports larger text, expandable chapters, and direct chapter navigation.
 - Saves text, photographs, and application files for offline reading on each device.
