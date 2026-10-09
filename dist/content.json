@@ -534,28 +534,31 @@
           "id": "centurion",
           "title": "The Centurion Lounge",
           "en": "D 登機區",
-          "lead": "D1 登機門對面。",
+          "lead": "D1 登機門對面。\n\n可用信用卡：Amex Platinum（個人／商務／Corporate）、Centurion 黑卡；Delta SkyMiles Reserve（須符合 Delta 當日航班條件）。",
           "sources": [
-            "las-centurion"
+            "las-centurion",
+            "las-access"
           ]
         },
         {
           "id": "sidecar",
           "title": "Sidecar by The Centurion Lounge",
           "en": "D 登機區",
-          "lead": "D1 登機門附近，鄰近 The Centurion Lounge。",
+          "lead": "D1 登機門附近，鄰近 The Centurion Lounge。\n\n可用信用卡：Amex Platinum（個人／商務／Corporate）、Centurion 黑卡；Delta SkyMiles Reserve（須符合 Delta 當日航班條件）。",
           "sources": [
-            "las-sidecar"
+            "las-sidecar",
+            "las-access"
           ]
         },
         {
           "id": "priority-pass",
           "title": "The Club LAS",
           "en": "D 登機區／Terminal 3",
-          "lead": "D 館：D33 登機門附近、二樓。\nE 館：Terminal 3，E2 登機門對面。",
+          "lead": "D 館：D33 登機門附近、二樓。\nE 館：Terminal 3，E2 登機門對面。\n\n可用信用卡：美國 Amex Platinum／Business Platinum（須先啟用附帶的 Priority Pass，憑會員卡入場）；其他附合資格 Priority Pass 或 LoungeKey 權益的信用卡亦可。",
           "sources": [
             "club-d",
-            "club-e"
+            "club-e",
+            "amex-lounge-terms"
           ]
         }
       ]
@@ -641,6 +644,14 @@
     "club-e": [
       "The Club LAS｜E2 對面",
       "https://theclubairportlounges.com/lounges/las-the-club-terminal-3"
+    ],
+    "las-access": [
+      "Amex｜可入場卡別",
+      "https://www.thecenturionlounge.com/info/access/"
+    ],
+    "amex-lounge-terms": [
+      "Amex｜Platinum 與 Priority Pass 權益",
+      "https://www.americanexpress.com/en-us/travel/lounges/the-platinum-card/terms"
     ]
   },
   "updated": "2026-10-09",
