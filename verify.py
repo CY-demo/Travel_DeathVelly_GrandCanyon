@@ -8,7 +8,7 @@ class Doc(HTMLParser):
  def handle_starttag(self,tag,attrs):self.elements.append((tag,dict(attrs)))
  def ids(self):return [a['id'] for t,a in self.elements if 'id' in a]
 root=Path(__file__).parent/'dist'
-pages=list(root.rglob('*.html'));assert len(pages)==12
+pages=list(root.rglob('*.html'));assert len(pages)==13
 for p in pages:
  s=p.read_text();doc=Doc(s)
  assert any(t=='meta' and a.get('name')=='viewport' for t,a in doc.elements)
@@ -31,7 +31,7 @@ for p in pages:
 
 for p in (root/'assets').glob('*.jpg'):assert p.read_bytes().startswith(b'\xff\xd8')
 assert len(json.loads((root/'parks.json').read_text()))==6
-print('PASS: 12 pages, local assets and anchors, 6 park entries, mobile viewport, and private itinerary markers.')
+print('PASS: 13 pages, local assets and anchors, 6 park entries, mobile viewport, and private itinerary markers.')
 from itinerary import DAYS
 assert len(DAYS)==9
 kenai=(root/'parks/kenai-fjords/index.html').read_text()

@@ -68,7 +68,7 @@
     "desc": "從 Copper Center 的展覽與短步道開始，認識這片巨大荒野；若想進入 Kennecott，請另留一段旅程。",
     "route": "routes/alaska/",
     "route_label": "阿拉斯加九日完整行程",
-    "near": "parks/wrangell-st-elias/#day-8",
-    "near_label": "Matanuska 冰川觀景"
+    "near": "nearby/matanuska/",
+    "near_label": "Matanuska 觀景與冰川健行"
   }
 ]
