@@ -1,47 +1,30 @@
-# Canyon Field Guide · 峽谷隨行
+# National Park Field Guide · 公園隨行
 
-A mobile-friendly Traditional Chinese travel guide to Death Valley, the Grand Canyon South Rim, Upper Antelope Canyon, Horseshoe Bend, and San José and Las Vegas airport lounges.
+A Traditional Chinese travel website combining Grand Canyon, Death Valley, and four Alaska national parks. Start with a park, follow a complete regional itinerary, or explore nearby destinations.
 
-**[Open the website](https://cy-demo.github.io/Travel_DeathVelly_GrandCanyon/)**
+## AI-built project
 
-## Built with AI
+This website was built with substantial AI assistance using ChatGPT and Codex. The author supplied travel experience, itinerary corrections, and editorial direction. AI assisted with implementation, layout, content organization, and explanatory writing. Personal experiences are distinguished from planning guidance; private flight dates, booking details, identities, and correspondence are excluded.
 
-This website was built with substantial AI assistance using ChatGPT and Codex. AI helped generate the application code, page layouts, and initial travel explanations. I defined the travel requirements, supplied itinerary details and tour-operator correspondence, and refined the experience through iterative feedback. The project explores how AI-assisted development can turn a practical family travel need into a usable, mobile-friendly offline guide.
+## Explore
 
-## What it does
+- `dist/index.html`: six-park overview with regional filters.
+- `dist/parks/`: Grand Canyon, Death Valley, Kenai Fjords, Denali, Katmai, and Wrangell–St. Elias.
+- `dist/routes/alaska/`: detailed nine-day itinerary.
+- `dist/routes/southwest/`: Las Vegas, Death Valley, Grand Canyon, and Page route.
+- `dist/nearby/page/`: Antelope Canyon, Horseshoe Bend, and surrounding stops.
+- `dist/travel/airports/`: expandable SJC and LAS lounge locations and eligible cards.
 
-- Organizes 30 reading chapters into three sightseeing days and an airport lounge location list.
-- Explains landscape formation alongside practical sightseeing notes and source links.
-- Supports larger text, expandable chapters, and direct chapter navigation.
-- Saves text, photographs, and application files for offline reading on each device.
-- Remembers reading preferences locally, without a sign-in or backend.
+## Build and validation
 
-## Technology
+Run `python3 build.py` to regenerate pages, then `python3 verify.py`. The build uses Python standard libraries only. `node verify.mjs` runs the same validation for GitHub Pages deployment.
 
-Plain HTML, CSS, and JavaScript; JSON content; a web app manifest; and a service worker using the Cache API. No framework, build step, or API key is required. There is no runtime AI service or audio narration.
+The `dist/` directory is a complete static site with relative links, usable under a GitHub repository path or a standalone domain. Existing `#death`, `#grand`, `#page`, and `#airport` bookmarks redirect to their new pages. Source modules: `itinerary.py`, `hub.py`, `park_notes.py`, and `canyon-content.json`.
 
-## Run locally
+## Offline reading and images
 
-From this repository, run:
+Use the offline download button while online to save guides and photos on that device. External references require internet access. Image credits and source URLs are retained in `dist/assets/credits.json`, `dist/assets/spots/manifest.json`, and the linked official references. Third-party image rights remain with their respective owners; see individual attribution and license information.
 
-```sh
-python3 -m http.server 8000 --directory dist
-```
+## Privacy
 
-Then open `http://localhost:8000`. Service workers require HTTPS or localhost. Run `node verify.mjs` for the static asset and offline-cache checks.
-
-## GitHub Pages
-
-Repository: [CY-demo/Travel_DeathVelly_GrandCanyon](https://github.com/CY-demo/Travel_DeathVelly_GrandCanyon). Live website: [Canyon Field Guide](https://cy-demo.github.io/Travel_DeathVelly_GrandCanyon/).
-
-In the repository settings, select **Pages → Source → GitHub Actions**. The included workflow publishes `dist/` whenever changes are pushed to `main`, or when run manually. Its successful deployment displays the public Pages URL. The manifest and asset paths support a project subdirectory.
-
-## Offline use
-
-Open the website while connected, choose **離線與使用**, and download the offline content. Repeat on every device and download again after content updates. Test with airplane mode before traveling. External source links still require connectivity, and browsers may remove stored content. Offline downloads on the original demo do not transfer to a different hosting domain.
-
-## Content and image credits
-
-Official park, tour-operator, and lounge references are linked in the guide and in `dist/content.json`. Photographs are credited in the website footer: Death Valley and Horseshoe Bend images from the U.S. National Park Service; Grand Canyon image credited to NPS / T. Karlovetz. Third-party names, photographs, and source materials retain their respective terms; this repository does not grant additional rights to them.
-
-Travel details are a dated planning reference, not a guarantee of access, schedules, prices, or tour stops. The public version excludes private booking records and traveler contact details.
+No personal dates, hotel bookings, reservation IDs, traveler names, analytics, or login logic are included. Regional itinerary times are labeled as published, selected, estimated, or suggested. The repository is public; local private notes are not included.

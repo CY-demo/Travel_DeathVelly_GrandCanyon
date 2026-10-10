@@ -1,0 +1,143 @@
+{
+  "coastal": {
+    "file": "coastal.jpg",
+    "alt": "Coastal Classic 沿線的阿拉斯加鐵路列車",
+    "caption": "Coastal Classic 沿線的阿拉斯加鐵路列車",
+    "credit": "Alaska Railroad",
+    "source": "https://www.alaskarailroad.com/ride-a-train/our-trains/coastal-classic",
+    "image_url": "https://www.alaskarailroad.com/sites/default/files/uploads/alaska_railroad_coastal_classic_train.jpg",
+    "width": 1200,
+    "height": 491
+  },
+  "denali-rail": {
+    "file": "denali-rail.jpg",
+    "alt": "Denali Star 列車與沿線山景，秋色實景",
+    "caption": "Denali Star 列車與沿線山景，秋色實景",
+    "credit": "Alaska Railroad",
+    "source": "https://www.alaskarailroad.com/ride-a-train/our-trains/denali-star",
+    "image_url": "https://www.alaskarailroad.com/sites/default/files/uploads/alaska_railroad_denali_star_train.jpg",
+    "width": 1200,
+    "height": 480
+  },
+  "dogs": {
+    "file": "dogs.jpg",
+    "alt": "Denali 護林員向遊客介紹雪橇犬",
+    "caption": "Denali 護林員向遊客介紹雪橇犬",
+    "credit": "NPS",
+    "source": "https://www.nps.gov/dena/planyourvisit/kennels.htm",
+    "image_url": "https://www.nps.gov/common/uploads/grid_builder/dena/crop1_1/D3B5CD43-C704-0366-CA16718BF5D92C5F.jpg",
+    "width": 1000,
+    "height": 1000
+  },
+  "savage": {
+    "file": "savage.jpg",
+    "alt": "Savage River 河流、步道與橋梁",
+    "caption": "Savage River 河流、步道與橋梁",
+    "credit": "NPS",
+    "source": "https://www.nps.gov/dena/planyourvisit/savage-river-area.htm",
+    "image_url": "https://www.nps.gov/common/uploads/grid_builder/dena/crop1_1/97EE9812-1DD8-B71B-0BB56CCE33085B00.jpg",
+    "width": 1000,
+    "height": 1000
+  },
+  "denali-center": {
+    "file": "denali-center.jpg",
+    "alt": "Denali Visitor Center 遊客中心",
+    "caption": "Denali Visitor Center 遊客中心",
+    "credit": "NPS",
+    "source": "https://www.nps.gov/dena/planyourvisit/the-denali-visitor-center.htm",
+    "image_url": "https://www.nps.gov/common/uploads/structured_data/15E7734A-B57A-7105-3A0246E991C8F72C.jpg",
+    "width": 900,
+    "height": 602
+  },
+  "brooks-river": {
+    "file": "brooks-river.jpg",
+    "alt": "Brooks River 附近湖岸的棕熊",
+    "caption": "Brooks River 附近湖岸的棕熊",
+    "credit": "NPS / R. Wood",
+    "source": "https://www.nps.gov/katm/planyourvisit/bear-watching.htm",
+    "image_url": "https://www.nps.gov/katm/planyourvisit/images/Bear-410-on-the-beach-at-Brooks-Camp_RWW8634-688-px.jpg",
+    "width": 688,
+    "height": 457
+  },
+  "brooks-falls": {
+    "file": "brooks-falls.jpg",
+    "alt": "Brooks Falls 觀熊平台與河中的棕熊",
+    "caption": "Brooks Falls 觀熊平台與河中的棕熊",
+    "credit": "NPS / R. Wood",
+    "source": "https://www.nps.gov/katm/planyourvisit/brooks-camp.htm",
+    "image_url": "https://www.nps.gov/katm/planyourvisit/images/katm.jpg",
+    "width": 688,
+    "height": 516
+  },
+  "wrangell-center": {
+    "file": "wrangell-center.jpg",
+    "alt": "Copper Center 的 Wrangell–St. Elias 遊客中心，秋季實景",
+    "caption": "Copper Center 的 Wrangell–St. Elias 遊客中心，秋季實景",
+    "credit": "NPS",
+    "source": "https://www.nps.gov/wrst/planyourvisit/wrangell-st-elias-visitor-center.htm",
+    "image_url": "https://www.nps.gov/wrst/planyourvisit/images/IMG_2099_3.jpeg",
+    "width": 1200,
+    "height": 900
+  },
+  "culture": {
+    "file": "culture.jpg",
+    "alt": "Ahtna Cultural Center 外觀，秋季實景",
+    "caption": "Ahtna Cultural Center 外觀，秋季實景",
+    "credit": "NPS",
+    "source": "https://www.nps.gov/wrst/planyourvisit/wrangell-st-elias-visitor-center.htm",
+    "image_url": "https://www.nps.gov/wrst/planyourvisit/images/IMG_2100_1.jpeg",
+    "width": 1200,
+    "height": 900
+  },
+  "anchorage-center": {
+    "file": "anchorage-center.jpg",
+    "alt": "安克拉治公共土地資訊中心所在的 Old Federal Building",
+    "caption": "安克拉治公共土地資訊中心所在的 Old Federal Building",
+    "credit": "NPS / ANCH",
+    "source": "https://www.nps.gov/anch/planyourvisit/anchorage-alaska-public-lands-information-center-aaplic.htm",
+    "image_url": "https://www.nps.gov/common/uploads/akr/park/anch/0B475FD7-ED9F-59F3-E9591C1F4FF29613/0B475FD7-ED9F-59F3-E9591C1F4FF29613.jpg",
+    "width": 1200,
+    "height": 900
+  },
+  "road": {
+    "file": "road.jpg",
+    "alt": "Glenn Highway 沿線的 King Mountain 與 Long Lake",
+    "caption": "Glenn Highway 沿線的 King Mountain 與 Long Lake",
+    "credit": "NARA / FHWA · Courtesy HDR Alaska, Inc. · Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Glenn_Highway_-_King_Mountain_and_Long_Lake_-_NARA_-_7718625.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Glenn_Highway_-_King_Mountain_and_Long_Lake_-_NARA_-_7718625.jpg",
+    "width": 1200,
+    "height": 687
+  },
+  "ship-creek": {
+    "file": "ship-creek.jpg",
+    "alt": "Ship Creek 河岸與安克拉治市區景色",
+    "caption": "Ship Creek 河岸與安克拉治市區景色",
+    "credit": "Haydn Blackey · CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ship_Creek_Fishing_-_Anchorage.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Ship_Creek_Fishing_-_Anchorage.jpg",
+    "width": 668,
+    "height": 1000,
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "modifications": "Resized and JPEG recompressed"
+  },
+  "flight": {
+    "file": "fly-denali.jpg",
+    "alt": "Fly Denali 小飛機停在冰雪地面的景觀，業者示意照片",
+    "credit": "Fly Denali",
+    "source": "https://www.flydenali.com/glacier-landing"
+  },
+  "cabin": {
+    "file": "cabin-nite.jpg",
+    "alt": "Alaska Cabin Nite Dinner Theatre 晚餐劇場，業者示意照片",
+    "credit": "Denali Park Village",
+    "source": "https://www.denaliparkvillage.com/things-to-do/alaska-cabin-nite-dinner-theatre/"
+  },
+  "matanuska": {
+    "file": "matanuska.jpg",
+    "alt": "Matanuska 州立休憩區的觀景平台與遠方冰川，秋季示意照片",
+    "credit": "Alaska State Parks / Alaska DNR",
+    "source": "https://dnr.alaska.gov/parks/aspunits/matsu/matsuglsrs.htm"
+  }
+}

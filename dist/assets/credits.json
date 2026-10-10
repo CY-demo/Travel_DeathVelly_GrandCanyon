@@ -1,0 +1,26 @@
+{
+  "kenai": {
+    "credit": "NPS / S. Rainone",
+    "source": "https://www.nps.gov/kefj/index.htm",
+    "alt": "Kenai Fjords 峽灣的海水、冰河與山巒",
+    "imageSource": "https://www.nps.gov/common/uploads/structured_data/BCC539E0-C12C-F7DF-5A919EE253882B5A.jpg?maxWidth=1600&maxHeight=1100&quality=90"
+  },
+  "denali": {
+    "credit": "NPS / Nathan Kostegian",
+    "source": "https://www.nps.gov/dena/index.htm",
+    "alt": "Denali 國家公園雪山倒映在湖水中",
+    "imageSource": "https://www.nps.gov/common/uploads/structured_data/3C83C9C7-1DD8-B71B-0B9B669ED961F97E.jpg?maxWidth=1600&maxHeight=1100&quality=90"
+  },
+  "katmai": {
+    "credit": "NPS / David Jacob",
+    "source": "https://www.nps.gov/katm/index.htm",
+    "alt": "Katmai 的棕熊在 Brooks Falls 等待躍起的鮭魚",
+    "imageSource": "https://www.nps.gov/common/uploads/structured_data/3C7A32DB-1DD8-B71B-0B37F66E9D0832AF.jpg?maxWidth=1600&maxHeight=1100&quality=90"
+  },
+  "wrangell": {
+    "credit": "NPS / Neal Herbert",
+    "source": "https://www.nps.gov/wrst/index.htm",
+    "alt": "Wrangell–St. Elias 的雪山、冰河與海岸",
+    "imageSource": "https://www.nps.gov/common/uploads/structured_data/3C7AAD63-1DD8-B71B-0BCE10FFD741A687.jpg?maxWidth=1600&maxHeight=1100&quality=90"
+  }
+}

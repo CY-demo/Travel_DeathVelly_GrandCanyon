@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "grand-canyon",
+    "name": "大峽谷",
+    "en": "Grand Canyon",
+    "image": "grand",
+    "region": "southwest",
+    "desc": "南緣觀景、Yavapai 地質博物館與直升機體驗。",
+    "route": "routes/southwest/",
+    "route_label": "拉斯維加斯・大峽谷・Page",
+    "near": "nearby/page/",
+    "near_label": "羚羊谷與馬蹄灣"
+  },
+  {
+    "slug": "death-valley",
+    "name": "死亡谷",
+    "en": "Death Valley",
+    "image": "death",
+    "region": "southwest",
+    "desc": "鹽灘、沙丘與彩色山丘，逐站認識沙漠地景。",
+    "route": "routes/southwest/",
+    "route_label": "拉斯維加斯往返與串遊",
+    "near": "routes/southwest/#death-route",
+    "near_label": "鬼城與公路沿途"
+  },
+  {
+    "slug": "kenai-fjords",
+    "name": "基奈峽灣",
+    "en": "Kenai Fjords",
+    "image": "kenai",
+    "region": "alaska",
+    "desc": "從 Seward 出海，看山谷中的冰緩緩抵達海洋。海岸線的形狀，是冰川留下的立體筆記。",
+    "route": "routes/alaska/",
+    "route_label": "阿拉斯加九日完整行程",
+    "near": "days/anchorage/",
+    "near_label": "Anchorage 與交通安排"
+  },
+  {
+    "slug": "denali",
+    "name": "丹奈利",
+    "en": "Denali",
+    "image": "denali",
+    "region": "alaska",
+    "desc": "用一段巴士旅程讀懂內陸荒野，再用短步道和遊客中心，把遠方的山變成眼前的故事。",
+    "route": "routes/alaska/",
+    "route_label": "阿拉斯加九日完整行程",
+    "near": "days/anchorage/",
+    "near_label": "Anchorage 與交通安排"
+  },
+  {
+    "slug": "katmai",
+    "name": "卡特邁",
+    "en": "Katmai",
+    "image": "katmai",
+    "region": "alaska",
+    "desc": "看熊的重點不只是站上瀑布平台，而是讀懂河流、食物與季節，給動物足夠的空間。",
+    "route": "routes/alaska/",
+    "route_label": "阿拉斯加九日完整行程",
+    "near": "days/anchorage/",
+    "near_label": "Anchorage 與交通安排"
+  },
+  {
+    "slug": "wrangell-st-elias",
+    "name": "蘭格—聖伊萊亞斯",
+    "en": "Wrangell–St. Elias",
+    "image": "wrangell",
+    "region": "alaska",
+    "desc": "從 Copper Center 的展覽與短步道開始，認識這片巨大荒野；若想進入 Kennecott，請另留一段旅程。",
+    "route": "routes/alaska/",
+    "route_label": "阿拉斯加九日完整行程",
+    "near": "parks/wrangell-st-elias/#day-8",
+    "near_label": "Matanuska 冰川觀景"
+  }
+]
