@@ -8,7 +8,7 @@ class Doc(HTMLParser):
  def handle_starttag(self,tag,attrs):self.elements.append((tag,dict(attrs)))
  def ids(self):return [a['id'] for t,a in self.elements if 'id' in a]
 root=Path(__file__).parent/'dist'
-pages=list(root.rglob('*.html'));assert len(pages)==13
+pages=list(root.rglob('*.html'));assert len(pages)==26
 for p in pages:
  s=p.read_text();doc=Doc(s)
  assert any(t=='meta' and a.get('name')=='viewport' for t,a in doc.elements)
@@ -31,7 +31,7 @@ for p in pages:
 
 for p in (root/'assets').glob('*.jpg'):assert p.read_bytes().startswith(b'\xff\xd8')
 assert len(json.loads((root/'parks.json').read_text()))==6
-print('PASS: 13 pages, local assets and anchors, 6 park entries, mobile viewport, and private itinerary markers.')
+print('PASS: 26 bilingual pages, local assets and anchors, 6 park entries, mobile viewport, and private itinerary markers.')
 from itinerary import DAYS
 assert len(DAYS)==9
 kenai=(root/'parks/kenai-fjords/index.html').read_text()
@@ -49,3 +49,25 @@ sw=(root/'sw.js').read_text()
 assert './days/anchorage/' in sw
 for entry in manifest.values():assert './assets/spots/'+entry['file'] in sw
 print('PASS: nine complete day routes, selected noon sailing, Denali advance-booking instructions, spot photos, offline assets.')
+# Every public page has a complete, navigable English counterpart.
+zhpages=[p for p in pages if 'en' not in p.relative_to(root).parts]
+assert len(zhpages)==13
+for p in zhpages:
+ ep=root/'en'/p.relative_to(root)
+ en=ep.read_text();zh=p.read_text()
+ assert '<html lang="en">' in en
+ assert not __import__('re').search('[\u4e00-\u9fff]',en.replace('中文','')),(ep,'untranslated content')
+ assert set(Doc(zh).ids())==set(Doc(en).ids())
+ assert 'class="language-switch"' in zh and 'class="language-switch"' in en
+ assert './en/'+str(p.relative_to(root)) in sw
+ for tag,a in Doc(en).elements:
+  if tag=='a' and a.get('href') and not a.get('hreflang'):
+   u=urlsplit(a['href'])
+   if not u.scheme and not u.netloc and u.path:
+    target=(ep.parent/u.path).resolve()
+    if target.suffix=='.html' or target.is_dir():assert target.is_relative_to((root/'en').resolve()),(ep,a['href'])
+for p in pages:
+ assert not any(x in p.read_text() for x in ['日期已移除','移除私人出發日期','下方九日表是較寬鬆','補上了','原筆記'])
+assert 'id="day-7"' in (root/'parks/katmai/index.html').read_text()
+assert 'Copper Center' in (root/'en/parks/katmai/index.html').read_text()
+print('PASS: all 13 English counterparts, full translation coverage, matching anchors, language-contained navigation and bilingual offline bundle.')

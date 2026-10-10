@@ -4,7 +4,7 @@ from extensions import section
 def render_rides(slug):
  titles={'katmai':'Katmai：兩次出發，才成功到 Brooks Camp','kenai-fjords':'Seward：火車下車後怎麼接船','denali':'Denali：車站、飯店、飛行與巴士怎麼接'}
  if slug not in titles:return ''
- s='<section id="our-connections"><div class="section-title"><p class="eyebrow">OUR JOURNEY / CONNECTION DETAILS</p><h2>'+titles[slug]+'</h2><p>以下保留這次旅程的時間與搭乘經驗，移除私人出發日期。這是個人行程紀錄，並非業者每天固定班表；下方另有供規劃使用的建議時間表。</p></div>'
+ s='<section id="our-connections"><div class="section-title"><p class="eyebrow">OUR JOURNEY / CONNECTION DETAILS</p><h2>'+titles[slug]+'</h2><p>從報到、轉乘到回程，這些是我們這趟旅行的搭乘經驗。班次與接駁會依季節和訂位而變動。</p></div>'
  if slug=='katmai':
   s+=section('第一次：Katmai Air 原訂的四段航空交通',[
    '原安排為飯店接駁到機場，再依序搭乘 Anchorage → King Salmon → Brooks Camp。報到地點、飯店接送時間及行李限制依確認通知；不要把小飛機基地當成 Anchorage 主航廈。',
@@ -22,7 +22,7 @@ def render_rides(slug):
    '這次保守估計看見約五隻不同的熊，包括母熊與幼熊、河裡覓食及吃鮭魚的熊；Lower River 與瀑布附近都有觀察機會。沒有看到期待中很多熊同時在瀑布抓魚的畫面，因此下次會優先考慮七月中旬。熊的數量與位置不是行程保證。'])
   s+=section('回程與租車：實際做了什麼，照排前要留意什麼',[
    '<strong>約 17:00 多：</strong>回到 Anchorage，接著到機場租車，再往 Copper Center 移動，當晚住當地。租車櫃檯取車與小飛機降落地點之間還需另算交通及辦理手續時間；這次沒有留下精確接駁與抵達飯店時間。',
-   '這是我們實際走過、但很緊湊的一段，不適合當作每天都能照做的保證。看熊返程若延誤，應調整公路段或留 Anchorage 休息；下方建議時間表採較寬鬆的版本，成功補飛後不再硬接當晚長途駕駛。',
+   '這是我們實際走過、但很緊湊的一段，不適合當作每天都能照做的保證。看熊返程若延誤，應調整公路段或留 Anchorage 休息；若希望玩得從容，可以另留一天給公路移動。',
    '最有用的準備是保留一至兩個可移動日、先存幾家業者聯絡方式，並確認租車與住宿的變更／取消條件。不要等天氣取消後才發現後面所有安排都不能動。'])
  elif slug=='kenai-fjords':
   s+=section('去程：Coastal Classic → 船公司接駁 → 中午遊船',[
@@ -35,10 +35,10 @@ def render_rides(slug):
  else:
   s+=section('北上當天：Denali Star → 飯店接駁 → Fly Denali',[
    '<strong>當時約 07:45</strong> 到 Anchorage 車站報到，<strong>08:20</strong> 搭 Denali Star 北上，<strong>15:40</strong> 抵達 Denali。給後續旅客的建議仍是依鐵路報到規定提早到場，不把這次較短的報到空檔當標準。',
-   '<strong>約 15:55：</strong>搭 Holland America 專屬接駁車往 Holland America Denali Lodge，<strong>約 16:15：</strong>入住。這是我們當時的住宿與接駁組合，不代表任何火車票都包含這間飯店接送。',
+   '<strong>約 15:55：</strong>搭 飯店專屬接駁車往 Denali 園區入口飯店，<strong>約 16:15：</strong>入住。這是我們當時的住宿與接駁組合，不代表任何火車票都包含這間飯店接送。',
    '<strong>約 17:30：</strong>Fly Denali 業者派車從飯店接往 Healy，接近傍晚六點的冰川飛行／著陸體驗；記得帶太陽眼鏡。<strong>約 20:00：</strong>接駁回飯店後吃晚餐。這次體驗很推薦；Ruth Glacier 與 Wrangell–St. Elias 的 Root Glacier 是不同地點。'])
   s+=section('園區日：飯店接 Tundra 團，下午再用公園接駁',[
-   '我們拿到的是 <strong>06:00</strong> 從 Holland America Denali Lodge 接送的 Tundra Wilderness Tour。這只是當次時刻；营運季每天有團，要提前報名，實際出發時間於出發前 48 小時公布／確認。規劃時仍預留約 5–5.5 小時及接送餘裕。',
+   '我們拿到的是 <strong>06:00</strong> 從 Denali 園區入口飯店 接送的 Tundra Wilderness Tour。這只是當次時刻；營運季每天有團，要提前報名，實際出發時間於出發前 48 小時公布／確認。規劃時仍預留約 5–5.5 小時及接送餘裕。',
    '午間回遊客中心用餐，下午從 Denali Visitor Center 的 Sled Dog Shuttle 站排隊，接 <strong>14:00</strong> 雪橇犬示範；看完後再按當天 Savage River 接駁班次決定是否走河谷步道。若 Tundra 團較晚出發，就要刪減下午安排。',
    '當晚另加了七點多的 Cabin Nite 晚餐劇場，覺得很有趣。要同時安排河谷步道與晚餐秀，先核對末班接駁及劇場報到時間，不要只看活動開始時刻。'])
   s+=section('南下回程：退房、行李與火車分開處理',[

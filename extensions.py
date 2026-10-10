@@ -39,7 +39,7 @@ def render_extensions(slug):
    'Root Glacier 位於 Wrangell–St. Elias；Denali 飛行行程常看的 Ruth Glacier 是另一座冰川，不能互換名稱。'])
   body+=section('建議住當地：自駕三天兩夜，飛入可縮短',[
    '<strong>第 1 天：</strong>早上從 Copper Center／Chitina 方向出發，為碎石路、拍照與過橋接駁留半天以上；下午抵達 McCarthy 或 Kennecott 入住、確認翌日導覽集合地點。',
-   '<strong>第 2 天：</strong>上午参加預訂的 Root Glacier 半日健行，下午依回程時間與體力安排 Kennecott 建築群；磨坊內部導覽需另外確認預訂。晚上再住當地，不趕著長途回 Anchorage。',
+   '<strong>第 2 天：</strong>上午參加預訂的 Root Glacier 半日健行，下午依回程時間與體力安排 Kennecott 建築群；磨坊內部導覽需另外確認預訂。晚上再住當地，不趕著長途回 Anchorage。',
    '<strong>第 3 天：</strong>上午離開，下午接公路行程；若要加 Matanuska 冰川健行，另留一整天最從容。九日行程原本只有 Day 8 遊客中心，改成這個版本通常至少多留兩天。',
    '<strong>飛入兩天一夜：</strong>第 1 天飛到 McCarthy、接駁入住及參觀鎮區；第 2 天安排冰川導覽後飛出。必須先讓業者確認導覽結束能銜接航班；若時間不合，改兩晚或購買已配好交通的日遊套裝。住宿 McCarthy／Kennecott 比住 Copper Center 更適合一早集合。'])
   body+='<p><a class="cta" href="../../nearby/matanuska/">延伸：Matanuska 冰川觀景與冰面健行 →</a></p>'

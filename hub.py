@@ -10,7 +10,7 @@ def render_hub(parks,head,foot,esc,ROOT,D):
  def image(key,prefix='../../'):
   return f'<img src="{prefix}assets/{key}.jpg" alt="{esc(key)} 景觀照片" width="1200" height="750" loading="lazy">'
  def footer(prefix='../../'):
-  return '</main><footer><strong>公園隨行 · National Park Field Guide</strong><p>以個人旅行經驗整理的中文導覽。公開內容不包含私人航班、住宿訂單或旅伴資料。行程時間為規劃參考，預訂與開放資訊請依業者及官方公告。</p><p><a href="'+prefix+'index.html">國家公園總覽</a> · <a href="'+prefix+'routes/alaska/">阿拉斯加九日</a> · <a href="'+prefix+'routes/southwest/">美西公園與峽谷</a></p><p class="fine">AI-assisted build · 圖片來源保留於各頁及照片資訊檔。</p><p id="offline-status" role="status" aria-live="polite"></p></footer></body></html>'
+  return '</main><footer><strong>公園隨行 · National Park Field Guide</strong><p>旅行故事、景點介紹與交通安排。阿拉斯加記錄實際旅程；美西頁面為出發前的行程安排。班次與開放資訊以當季公告為準。</p><p><a href="'+prefix+'index.html">國家公園總覽</a> · <a href="'+prefix+'routes/alaska/">阿拉斯加九日</a> · <a href="'+prefix+'routes/southwest/">美西公園與峽谷</a></p><p class="fine">AI-assisted build · 圖片來源保留於各頁及照片資訊檔。</p><p id="offline-status" role="status" aria-live="polite"></p></footer></body></html>'
  # Preserve the complete Alaska itinerary under a stable regional route.
  alaska=(D/'index.html').read_text()
  def relocate(m):
@@ -19,7 +19,7 @@ def render_hub(parks,head,foot,esc,ROOT,D):
   return f'{a}="../../{u}"'
  alaska=re.sub(r'(href|src)="([^"]+)"',relocate,alaska)
  alaska=alaska.replace('https://cy-demo.github.io/Travel_DeathVelly_GrandCanyon/','../southwest/')
- alaska=alaska.replace('<section id="days">','<section class="chapter" id="our-route"><h2>我們實際搭乘的銜接與調整</h2><p>個人旅行日期已移除，保留搭乘時間與接駁經驗。這次 Katmai 第一次起飛後因天氣返回 Anchorage，隔天換業者才成功進 Brooks Camp，約下午五點多回城後再租車往 Copper Center。下方九日表是較寬鬆的建議版本，與這次緊湊的實際走法不同。</p><div class="quick-stops"><a href="../../parks/kenai-fjords/#our-connections">火車與 Seward 船班</a><a href="../../parks/denali/#our-connections">Denali 飯店、飛行與巴士接駁</a><a href="../../parks/katmai/#our-connections">Katmai 原訂航程、折返與補飛</a></div></section><section id="days">')
+ alaska=alaska.replace('<section id="days">','<section class="chapter" id="our-route"><h2>我們實際搭乘的銜接與調整</h2><p>從 Anchorage 出發，搭火車看峽灣與 Denali，再飛到 Brooks Camp 看熊，最後自駕到 Copper Center。Katmai 第一次起飛後因天氣折返，隔天換業者才成行，成為這趟旅行最難忘的轉折。</p><div class="quick-stops"><a href="../../parks/kenai-fjords/#our-connections">火車與 Seward 船班</a><a href="../../parks/denali/#our-connections">Denali 飯店、飛行與巴士接駁</a><a href="../../parks/katmai/#our-connections">Katmai 原訂航程、折返與補飛</a></div></section><section id="days">')
  alaska=alaska.replace('</main>', '<section><h2>想延伸行程？</h2><div class="quick-stops"><a href="../../parks/katmai/#alternatives">Katmai 過夜與看熊季節</a><a href="../../parks/wrangell-st-elias/#alternatives">McCarthy 與 Root Glacier</a><a href="../../nearby/matanuska/">Matanuska 冰川健行</a></div></section></main>')
  write(Path('routes/alaska'),alaska)
  write(Path('nearby/matanuska'),head('Matanuska 冰川觀景與健行','../../')+matanuska_body()+footer())
@@ -29,7 +29,8 @@ def render_hub(parks,head,foot,esc,ROOT,D):
   text=text.replace('<nav class="breadcrumbs">','<nav class="breadcrumbs"><a href="../../index.html">國家公園總覽</a><span>／</span>')
   text=text.replace('<a href="../../routes/alaska/#days">返回逐日行程 ↑</a>','<a href="../../index.html">國家公園總覽 ↑</a> · <a href="../../routes/alaska/#days">阿拉斯加行程</a>')
   if p.parent.name in [x['slug'] for x in parks]:
-   text=text.replace('<nav class="tabs day-tabs">',render_rides(p.parent.name)+render_notes(p.parent.name,esc)+render_extensions(p.parent.name)+'<nav class="tabs day-tabs">')
+   jump='<nav class="quick-stops" aria-label="閱讀這座公園"><a href="#'+('our-connections' if p.parent.name in ('kenai-fjords','denali','katmai') else 'day-8')+'">旅行紀錄</a><a href="#park-notes">景點與心得</a>'+('<a href="#alternatives">延伸玩法</a>' if p.parent.name in ('katmai','wrangell-st-elias') else '')+'</nav>'
+   text=text.replace('<nav class="tabs day-tabs">',jump+render_rides(p.parent.name)+render_notes(p.parent.name,esc)+render_extensions(p.parent.name)+'<nav class="tabs day-tabs">')
   p.write_text(text)
  c=json.loads((ROOT/'canyon-content.json').read_text())
  days={x['id']:x for x in c['days']}
@@ -66,7 +67,7 @@ def render_hub(parks,head,foot,esc,ROOT,D):
  for e in entries:
   cards+=f'<article class="park-card hub-card" data-region="{e["region"]}">{image(e["image"],"")}<div><p class="eyebrow">{"ALASKA" if e["region"]=="alaska" else "AMERICAN SOUTHWEST"}</p><h3>{e["name"]}<small>{e["en"]}</small></h3><p>{e["desc"]}</p><a class="cta primary" href="parks/{e["slug"]}/">進入公園導覽 →</a><div class="card-links"><a href="{e["route"]}">{e["route_label"]} ↗</a><a href="{e["near"]}">{e["near_label"]} ↗</a></div></div></article>'
  home=head('國家公園總覽')+'<nav class="tabs"><a href="#parks">選國家公園</a><a href="#routes">完整行程</a><a href="#nearby">周邊景點</a><a href="travel/airports/">機場貴賓室</a></nav>'
- home+=f'<section class="hero"><div class="hero-photo">{image("grand","")}</div><div class="hero-copy"><p class="eyebrow">NATIONAL PARKS / PERSONAL JOURNEYS</p><h1>從一座公園，<br>展開一趟旅行。</h1><p>看懂地景，也知道怎麼安排。<br>把親身經驗、景點故事與逐日路線放在一起。</p><a class="cta" href="#parks">選擇想去的國家公園 ↗</a></div></section><div class="overview-strip"><span>6 座國家公園</span><span>2 條區域行程</span><span>中文導覽・照片・離線閱讀</span></div>'
+ home+=f'<section class="hero"><div class="hero-photo">{image("grand","")}</div><div class="hero-copy"><p class="eyebrow">NATIONAL PARKS / PERSONAL JOURNEYS</p><h1>從一座公園，<br>展開一趟旅行。</h1><p>看懂地景，也知道怎麼安排。<br>把親身經驗、景點故事與逐日路線放在一起。</p><a class="cta" href="#parks">選擇想去的國家公園 ↗</a></div></section><div class="overview-strip"><span>6 座國家公園</span><span>2 條區域行程</span><span>中文／English・照片・離線閱讀</span></div>'
  home+='<section id="parks"><div class="section-title"><p class="eyebrow">CHOOSE YOUR PARK</p><h2>國家公園總覽</h2><p>先選一座公園，再連到完整路線與周邊景點。</p></div><div class="filter-bar" role="group" aria-label="依地區篩選"><button data-filter="all" aria-pressed="true">全部 6 座</button><button data-filter="southwest" aria-pressed="false">美西峽谷 2 座</button><button data-filter="alaska" aria-pressed="false">阿拉斯加 4 座</button></div><div class="park-grid">'+cards+'</div></section>'
  home+='<section id="routes"><div class="section-title"><p class="eyebrow">FOLLOW THE JOURNEY</p><h2>想直接照著安排？選完整行程。</h2></div><div class="reading-grid route-options"><article><p class="eyebrow">SOUTHWEST</p><h3>拉斯維加斯・沙漠與峽谷</h3><p>死亡谷一日，加上大峽谷與 Page 兩日路線；串聯羚羊谷、馬蹄灣與沿途停留。</p><a class="cta" href="routes/southwest/">看美西行程 →</a></article><article><p class="eyebrow">ALASKA / 9 DAYS</p><h3>鐵路・冰川・四座國家公園</h3><p>Seward 遊船、Denali 火車與飛行、Katmai 看熊，再沿公路到 Copper Center。</p><a class="cta" href="routes/alaska/">看阿拉斯加九日 →</a></article></div></section>'
  home+='<section id="nearby"><div class="section-title"><p class="eyebrow">AROUND THE PARKS</p><h2>周邊景點與旅行配套</h2><p>這些是路線上的延伸停留，另列於國家公園之外。</p></div><div class="reading-grid"><article><h3>Page：羚羊谷與馬蹄灣</h3><p>砂岩、科羅拉多河、包威爾湖與水壩。</p><a href="nearby/page/">進入周邊導覽 →</a></article><article><h3>Matanuska 觀景與冰川健行</h3><p>比較州立休憩區短走與有導遊的冰面健行，選擇自駕或 Anchorage 接送。</p><a href="nearby/matanuska/">看交通與一日安排 →</a></article><article><h3>Anchorage 與機場</h3><p>城市補給、行程緩衝與 SJC／LAS 貴賓室位置。</p><a href="days/anchorage/">Anchorage 安排 →</a><br><a href="travel/airports/">依機場查貴賓室 →</a></article></div></section>'
