@@ -1,6 +1,7 @@
 import json,re
 from park_notes import render_notes
 from extensions import render_extensions, matanuska_body
+from actual_rides import render_rides
 from pathlib import Path
 
 def render_hub(parks,head,foot,esc,ROOT,D):
@@ -18,6 +19,7 @@ def render_hub(parks,head,foot,esc,ROOT,D):
   return f'{a}="../../{u}"'
  alaska=re.sub(r'(href|src)="([^"]+)"',relocate,alaska)
  alaska=alaska.replace('https://cy-demo.github.io/Travel_DeathVelly_GrandCanyon/','../southwest/')
+ alaska=alaska.replace('<section id="days">','<section class="chapter" id="our-route"><h2>我們實際搭乘的銜接與調整</h2><p>個人旅行日期已移除，保留搭乘時間與接駁經驗。這次 Katmai 第一次起飛後因天氣返回 Anchorage，隔天換業者才成功進 Brooks Camp，約下午五點多回城後再租車往 Copper Center。下方九日表是較寬鬆的建議版本，與這次緊湊的實際走法不同。</p><div class="quick-stops"><a href="../../parks/kenai-fjords/#our-connections">火車與 Seward 船班</a><a href="../../parks/denali/#our-connections">Denali 飯店、飛行與巴士接駁</a><a href="../../parks/katmai/#our-connections">Katmai 原訂航程、折返與補飛</a></div></section><section id="days">')
  alaska=alaska.replace('</main>', '<section><h2>想延伸行程？</h2><div class="quick-stops"><a href="../../parks/katmai/#alternatives">Katmai 過夜與看熊季節</a><a href="../../parks/wrangell-st-elias/#alternatives">McCarthy 與 Root Glacier</a><a href="../../nearby/matanuska/">Matanuska 冰川健行</a></div></section></main>')
  write(Path('routes/alaska'),alaska)
  write(Path('nearby/matanuska'),head('Matanuska 冰川觀景與健行','../../')+matanuska_body()+footer())
@@ -27,7 +29,7 @@ def render_hub(parks,head,foot,esc,ROOT,D):
   text=text.replace('<nav class="breadcrumbs">','<nav class="breadcrumbs"><a href="../../index.html">國家公園總覽</a><span>／</span>')
   text=text.replace('<a href="../../routes/alaska/#days">返回逐日行程 ↑</a>','<a href="../../index.html">國家公園總覽 ↑</a> · <a href="../../routes/alaska/#days">阿拉斯加行程</a>')
   if p.parent.name in [x['slug'] for x in parks]:
-   text=text.replace('<nav class="tabs day-tabs">',render_notes(p.parent.name,esc)+render_extensions(p.parent.name)+'<nav class="tabs day-tabs">')
+   text=text.replace('<nav class="tabs day-tabs">',render_rides(p.parent.name)+render_notes(p.parent.name,esc)+render_extensions(p.parent.name)+'<nav class="tabs day-tabs">')
   p.write_text(text)
  c=json.loads((ROOT/'canyon-content.json').read_text())
  days={x['id']:x for x in c['days']}
